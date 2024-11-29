@@ -13,99 +13,39 @@
     </rentals>
   </user>
   <user>
-    <id>3</id>
-    <username>vidura</username>
-    <password>$2y$10$3otJAxX8ZwyGpTIJdhcmF.MwL/0ownnwaF0ZXzDCgrE0T8vTFfYvq</password>
+    <id>2</id>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$SoVPmSUFI4aM4Z.8ktPVVekpKdnWgkIf6W6RjjC..HhqRQ3wIR.xy</password>
     <rentals/>
   </user>
   <user>
     <id>3</id>
-    <username>namal</username>
-    <password>$2y$10$cjjFmn5Y0lgu0JqNbds89uR2//ATnEk0.y6.tx2iNtrBTYdfhPgnK</password>
+    <username>Roshan madusanka</username>
+    <password>$2y$10$kJ3x9haiwuIxJvrQsP6ZYu.6FE.KErPcFavFL7d9cM8m1.5S0/Ot2</password>
     <rentals/>
   </user>
   <user>
     <id>4</id>
-    <username>vidura1</username>
-    <password>$2y$10$hUoRq3DWGIQZEVbzqH4y3.Zw3XRgtGIpSsKGq3oQjb1VOUHKJ6V9a</password>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$c6O1pMv8XbPYfHum592WveJf5bucE/uWdL/nYUB.Mv3DFWZ09W3A6</password>
     <rentals/>
   </user>
   <user>
     <id>5</id>
-    <username>v</username>
-    <password>$2y$10$jDj4PEAsRYNVGVPxifKaOehcFp16fmakLMpahyGHugR25SOoFn64O</password>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$b462iTv9VaoWFW02d0e8lug20S2fp6ZaDir6yqcZcRt1jSp.dZD.m</password>
     <rentals/>
   </user>
   <user>
     <id>6</id>
-    <username>nimal</username>
-    <password>$2y$10$4Q.znmh3axhRayqZ8j30f.5duG66sCKv2pccZlm937FulHzlLt8rO</password>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$1YMbZHv5YY85roen/gvAu.bsPCGcrCEYwKcYPU7iUVRVz98ruojNG</password>
     <rentals/>
   </user>
   <user>
     <id>7</id>
-    <username>user</username>
-    <password>$2y$10$9Z/9WCq8kTDkTRwbdJ4y5eUY/Bg05mUNsuL1INwQukXyZ6VH38MD.</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>8</id>
-    <username>sunil</username>
-    <password>$2y$10$2awWD7ENaJZXsVLVqzVvm.4o.JyZYMt/DA1jrS1dwsdptLrczjfY2</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>9</id>
-    <username>Dinuka</username>
-    <password>$2y$10$MlLhXriOVGCi.wDaw/iOle/p.cZhdvlguXgyFGiffFOEnFEbOI3Mu</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>10</id>
     <username>Dinuka Ashan</username>
-    <password>$2y$10$LExkOGifohiHs4TBiCJyG.bc1vKpPebTZnolfTPM.mm6gMrCVGZM6</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>11</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$DCX.i9LX8NVcQIJkgTYDi.HeaiMEG3vjFLiYVn3mx4cf.pUKQ8vaa</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>12</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$VEpuPolEtA0OhwK3au1qpeInhJjYcs.TewXPISJWfQzeJoe1L8Qbq</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>13</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$TX89H758xiSFfhq94mCEeOtedQgnIgVKPuvIg5NOSve4KlgH.VZVS</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>14</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$ZsT2UAXbw3MBL5W1grQeFOESzMHsh/KbZgu7o9TXFRVfTEoJxubvq</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>15</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$JgQ6FcqoYr1ZalC/U7ZCOesTKRI7ZoaSMbmVDmBz4rbGcUVZ72qzu</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>16</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$8Kxk7RQVmOyEGePy9It1Qe2DWu8Mbv.p1XCjtvrrFAWBhaIos4D4i</password>
-    <rentals/>
-  </user>
-  <user>
-    <id>17</id>
-    <username>Dinuka Ashan</username>
-    <password>$2y$10$Vj/vhL/w1j40dkOzbjhAEeAmO4DcjZhzZ5GCmGtrcZbt6vHHhAUfu</password>
+    <password>$2y$10$pLcO1En/K1zsFdCS4/EylOR2etc/oLokt7opqNzMVdyrg8LU0jwtW</password>
     <rentals/>
   </user>
 </users>

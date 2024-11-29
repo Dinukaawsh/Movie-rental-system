@@ -30,4 +30,22 @@
     <password>$2y$10$Ohlww7dCrGjeZT6Sh6l0P.ODTQu0RHEACqUzl7aNJrZI6I.X3PHh.</password>
     <rentals/>
   </user>
+  <user>
+    <id>6</id>
+    <username>Roshan madusanka</username>
+    <password>$2y$10$9JAIb1tbCcUGQGS97m4LoumAQbHQ0.XM/GDwKRpcYOxQjZ.k0Nyta</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>7</id>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$HCmuY270Exb23rYc8omAMuEyO0aEILHFpB4z7.Q/xCLHD6RXAOm5i</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>8</id>
+    <username>Roshan madusanka</username>
+    <password>$2y$10$SHoOq7E7Jpvu9kQ5xt0KNOIuDt7HWfBXjU6rrt.tBskePbp5Y7Tmu</password>
+    <rentals/>
+  </user>
 </users>

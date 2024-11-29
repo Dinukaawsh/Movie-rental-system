@@ -4,9 +4,9 @@
     <title>Winnie the pooh</title>
     <genre>horror</genre>
     <releaseYear>2024</releaseYear>
-    <rating>9.5</rating>
+    <rating>9.7</rating>
     <available>true</available>
-    <image>uploads/vinnie the pooh.jpg</image>
+    <image>images/vinnie the pooh.jpg</image>
   </movie>
   <movie id="1729535839">
     <title>Vedaa</title>
@@ -14,7 +14,7 @@
     <releaseYear>2024</releaseYear>
     <rating>9.6</rating>
     <available>true</available>
-    <image>uploads/vedaa.jpg</image>
+    <image>images/vedaa.jpg</image>
   </movie>
   <movie id="1729535883">
     <title>Trigger warning</title>
@@ -22,7 +22,7 @@
     <releaseYear>2024</releaseYear>
     <rating>8.8</rating>
     <available>true</available>
-    <image>uploads/Trigger warning.jpg</image>
+    <image>images/Trigger warning.jpg</image>
   </movie>
   <movie id="1729535924">
     <title>Deadpool and Wulverine</title>
@@ -30,7 +30,7 @@
     <releaseYear>2024</releaseYear>
     <rating>9.8</rating>
     <available>true</available>
-    <image>uploads/deadpool and wulwerine.jpeg</image>
+    <image>images/deadpool and wulwerine.jpeg</image>
   </movie>
   <movie id="1729535961">
     <title>Ghosted</title>
@@ -38,7 +38,7 @@
     <releaseYear>2022</releaseYear>
     <rating>8.9</rating>
     <available>true</available>
-    <image>uploads/ghosted.jpg</image>
+    <image>images/ghosted.jpg</image>
   </movie>
   <movie id="1729536009">
     <title>The Dark night</title>
@@ -46,6 +46,30 @@
     <releaseYear>2018</releaseYear>
     <rating>9.0</rating>
     <available>true</available>
-    <image>uploads/the dark nignt.jpeg</image>
+    <image>images/the dark nignt.jpeg</image>
+  </movie>
+  <movie id="1732880919">
+    <title>Outside 2024</title>
+    <genre>horror</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.0</rating>
+    <available>true</available>
+    <image>images/outside.jpg</image>
+  </movie>
+  <movie id="1732881119">
+    <title>Venom the last dance</title>
+    <genre>Marval</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.8</rating>
+    <available>true</available>
+    <image>images/venom.jpg</image>
+  </movie>
+  <movie id="1732881336">
+    <title>Bade Miyan Chote Miyan</title>
+    <genre>Action</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.1</rating>
+    <available>true</available>
+    <image>images/bade.jpg</image>
   </movie>
 </catalog>

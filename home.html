@@ -2,449 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the BLASTER Movie Rental System. Rent your favorite movies easily!">
     <title>Home - BLASTER Movie Rental System</title>
     <style>
-
-        /* General Styles */
-body {
-    font-family: 'Poppins', sans-serif; /* Sleek, modern font */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Flexbox centering */
-    flex-direction: column; /* Column direction for main and footer */
-    justify-content: space-between; /* Space between header and footer */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide any overflow */
-    background: 
-        url('images/cinema.jpg') no-repeat center center fixed;
-    background-size: 400% 400%; /* Larger background for animation */
-    animation: gradientAnimation 10s ease-in-out infinite; /* Faster animation */
-}
-
-/* Keyframes for animated gradient background */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-        opacity: 1; /* Start fully opaque */
-    }
-    25% {
-        background-position: 100% 50%; /* Move to the right */
-        opacity: 0.8; /* Slightly transparent */
-    }
-    50% {
-        background-position: 0% 100%; /* Move down */
-        opacity: 1; /* Fully opaque again */
-    }
-    75% {
-        background-position: 100% 100%; /* Move diagonally */
-        opacity: 0.8; /* Slightly transparent */
-    }
-    100% {
-        background-position: 0% 50%; /* Back to start */
-        opacity: 1; /* Fully opaque */
-    }
-}
-
-/* Enhanced Particle Background */
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.8; /* Increased opacity for better visibility */
-}
-
-/* Additional Particle Settings */
-.particle {
-    background-color: #ffffff; /* White color for particles */
-    filter: blur(4px); /* Apply a slight blur for a glowing effect */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
-}
-
-
-
-        main {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.6); /* More transparent background */
-            padding: 60px; /* Smaller padding for a more compact look */
-            border-radius: 15px; /* Slightly rounded corners */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-            backdrop-filter: blur(8px); /* Blur effect for a modern glass look */
-            margin: auto; /* Center main container */
-            max-width: 800px; /* Increased maximum width for the main container */
-            width: 100%; /* Responsive width */
-            min-height: 200px; /* Set a minimum height for the main container */
-        }
-        main:hover {
-            transform: scale(1.03); /* Slight scale effect on hover */
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
-        }
-
-        h1 {
-            color: #f7f7f7; /* Off-white text color */
-            font-size: 2.5rem; /* Smaller title size */
-            margin-bottom: 30px;
-            letter-spacing: 1.5px; /* Spacing between letters */
-            text-transform: uppercase; /* Uppercase for emphasis */
-            font-weight: 600;
-            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
-            animation: fadeIn 1s ease-in-out; /* Fade-in animation for header */
-        }
-
-        /* Button Container */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between buttons */
-        }
-
-        /* Button Styles */
-        .btn {
-            padding: 10px 30px; /* Adjusted padding */
-            border-radius: 50px; /* Fully rounded buttons */
-            text-decoration: none;
-            overflow: hidden; /* Hide overflow for ripple effect */
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #fff; /* White text color */
-            background-color: transparent; /* Transparent background */
-            border: 2px solid transparent; /* Initially no border */
-            position: relative;
-            z-index: 1;
-            transition: all 0.4s ease; /* Smooth transition for hover effects */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-        }
-
-        /* Before Hover Effect */
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff0095, #6f35dc); /* Gradient hover color */
-            z-index: -1;
-            border-radius: 50px; /* Match the button's rounded shape */
-            transition: all 0.5s ease; /* Smooth transition for hover effect */
-        }
-
-        /* On Hover */
-        .btn:hover::before {
-            width: 100%; /* Expand background to full width */
-        }
-
-        .btn:hover {
-            color: #fff; /* Keep the text white */
-            transform: translateY(-5px); /* Slight lift on hover */
-            border: 2px solid #fff; /* White border on hover */
-            background-color: #e91e63; /* Darker shade on hover */
-        }
-        button:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            transform: scale(0);
-            border-radius: 50%;
-            animation: ripple 0.6s linear;
-            opacity: 0;
-        }
-        
-        button:active:after {
-            transform: scale(4); /* Scale up the ripple */
-            opacity: 1; /* Make it visible */
-        }
-
-        /* Active/Pressed Effects */
-        .btn:active {
-            transform: translateY(2px); /* Push down slightly on click */
-            box-shadow: none; /* Remove shadow on click */
-            transform: scale(0.98); /* Slightly reduce size on click */
-        }
-        .btn:focus {
-            outline: 2px solid #ff0095; /* Highlight focus state */
-            outline-offset: 2px; /* Space the outline away from the button */
-        }
-        @keyframes ripple {
-            from {
-                transform: scale(0);
-                opacity: 0.5;
-            }
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.6); /* Transparent footer */
-            color: #fff;
-            padding: 10px 0; /* Reduced padding for footer */
-            text-align: center;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .footer-links {
-            margin-bottom: 5px;
-        }
-
-        .footer-links a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: #f0db4f;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        .social-media a {
-            margin: 0 10px;
-        }
-
-        .social-media a img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .social-media a:hover img {
-            opacity: 0.8;
-        }
-
-        /* Fade In Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            main {
-                padding: 20px 10px; /* Reduced padding for mobile */
-            }
-
-            .button-container {
-                flex-direction: column;
-            }
-
-            .button-container .btn {
-                width: 100%; /* Full-width buttons on mobile */
-                margin-bottom: 10px; /* Space between buttons */
-            }
-        }
-         /* Background Image */
-         #background-image {
+        /* Background image setup */
+        #background-image {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('images/cinema.jpg') no-repeat center center fixed;
-            background-size: cover;
-            z-index: -2; /* Below other layers */
-        }
-
-       /* Overlay with Animated Gradient */
-    #gradient-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* In front of the background image */
-    background: linear-gradient(45deg, rgba(255, 0, 149, 0.2), rgba(255, 111, 53, 0.2), rgba(111, 53, 220, 0.2)); /* Reduced opacity */
-    animation: gradientAnimation 10s ease-in-out infinite; /* Gradient animation */
-    backdrop-filter: blur(5px); /* Reduced blur effect */
-}
-
-        /* Keyframes for animated gradient overlay */
-        @keyframes gradientAnimation {
-            0% {
-                opacity: 1; /* Start fully opaque */
-            }
-            25% {
-                opacity: 0.8; /* Slightly transparent */
-            }
-            50% {
-                opacity: 1; /* Fully opaque again */
-            }
-            75% {
-                opacity: 0.8; /* Slightly transparent */
-            }
-            100% {
-                opacity: 1; /* Back to fully opaque */
-            }
-        }
-
-        /* Enhanced Particle Background */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            background: url('images/cinema.jpg') no-repeat center center/cover;
             z-index: -1;
-            opacity: 0.8; /* Increased opacity for better visibility */
         }
-
+    
+        /* Ensuring content fits well */
+        main {
+            z-index: 1;
+        }
+    
+        .button-container .btn {
+            min-width: 150px;
+        }
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;  /* Gold color */
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <div id="background-image"></div> <!-- Fixed background image -->
-    <div id="gradient-overlay"></div> <!-- Gradient overlay -->
-    <div id="particles-js"></div> <!-- Particles background -->
-    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
-    <main>
-        <h1>BLASTER Movie Rental System</h1>
-        <div class="button-container">
-            <a href="login.html" class="btn user-btn">User</a>
-            <a href="admin_login.html" class="btn admin-btn">Admin</a>
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background: linear-gradient(45deg, #ff6a00, #ee0979);">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-uppercase text-white" href="#">BLASTER Movie Rental System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="#about-us">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-white" href="#contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2024 BLASTER Movie Rental System | All rights reserved</p>
-            <div class="social-media">
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </nav>
+    </header>
+    
+    <section id="slider" class="mb-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+    
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="images/slider.jpeg" class="d-block w-100" alt="New Releases">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Discover the Latest Blockbusters</h5>
+                        <p>Stream the newest and most exciting movies now.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="images/slide2.jpg" class="d-block w-100" alt="Top Picks">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Top Picks for You</h5>
+                        <p>Handpicked favorites for every movie lover.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="images/slide3.png" class="d-block w-100" alt="Special Offers">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Exclusive Discounts</h5>
+                        <p>Don't miss out on limited-time offers and deals.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+   <!-- Background Image -->
+<div id="background-image"></div>
+
+<!-- Main Content Section -->
+<main class="text-center text-light d-flex flex-column justify-content-center align-items-center vh-100">
+    <h1 class="display-4 fw-bold">Welcome to BLASTER Movie Rental</h1>
+    <p class="lead mb-4">Your one-stop destination for renting the latest movies</p>
+    <div class="button-container">
+        <a href="login.html" class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-user"></i> User
+        </a>
+        <a href="admin_login.html" class="btn btn-dark btn-lg">
+            <i class="fas fa-user-shield"></i> Admin
+        </a>
+    </div>
+</main>
+
+
+<section id="about-us" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="mb-4">About BLASTER Movie Rental</h2>
+                <p class="lead mb-4">
+                    BLASTER Movie Rental is dedicated to bringing you the best movie rental experience. 
+                    From classic hits to the latest blockbusters, we offer a vast library of movies at your fingertips.
+                </p>
+                <p class="mb-4">
+                    Our mission is to make movie nights memorable and hassle-free. Whether you're streaming online or renting DVDs, 
+                    we’ve got you covered with our seamless service and customer support.
+                </p>
+                <!-- Centered Icon -->
+                <i class="fas fa-film fa-5x text-primary"></i>
             </div>
         </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff" // White color for particles
-                },
-                "shape": {
-                    "type": "circle", // Particle shape
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 6, // Increased size for thickness
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff", // White lines
-                    "opacity": 0.4,
-                    "width": 2 // Increased line thickness
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>  
+    </div>
+</section>
+
+    
+
+    <section id="contact-us" class="py-5 bg-light">
+
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <!-- Contact Info -->
+                <div class="col-md-6">
+                    <h5>Get in Touch</h5>
+                    <p><i class="fas fa-envelope text-primary"></i> Email: dinukaaw.sh@gmail.com</p>
+                    <p><i class="fas fa-phone text-primary"></i> Phone: +94 767 326 845</p>
+                    <p><i class="fas fa-map-marker-alt text-primary"></i> Address: colombo sri lanka</p>
+                </div>
+                <!-- Contact Form -->
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+      <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Links -->
+            <div class="col-md-4">
+                <h5>BLASTER Movie Rental</h5>
+                <p>Providing the best online movie rental experience for movie enthusiasts around the world.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#about-us" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-white">
+        <div class="text-center">
+            <p class="mb-0">© 2024 BLASTER Movie Rental System. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
